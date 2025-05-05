@@ -1,0 +1,43 @@
+<!-- onde-doar.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onde Doar - Doe Sangue</title>
+  <link rel="stylesheet" href="front-end/css/style.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container">
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="como-doar.html">Como Doar</a>
+        <a href="requisitos.html">Requisitos</a>
+        <a href="onde-doar.html">Onde Doar</a>
+        <a href="duvidas.html">Dúvidas</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="agendamento-section">
+    <div class="container">
+      
+      <!-- Formulário para pesquisa de CEP -->
+      <div class="container" id="cep-search">
+        <h3>Encontre o local de doação mais próximo</h3>
+        <p>Digite seu CEP para encontrar a unidade mais próxima de você.</p>
+        <input type="text" id="cep" placeholder="Digite seu CEP">
+        <button id="search-btn">Buscar CEP</button>
+
+        <div id="cep-result" style="margin-top: 20px; display: none;">
+          <h4>Resultado:</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Link para seu JavaScript externo -->
+  <script src="js/cep.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doe Sangue - Agendar Doação</title>
+
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Identity Services -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Google API Client -->
+  <script src="https://apis.google.com/js/api.js" async defer></script>
+
+  <!-- Biblioteca para decodificar JWT -->
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <nav class="top-nav">
+
+    <div class="container">
+      <div class="nav-links">
+        <a href="/html/index.html">Início</a>
+        <a href="/html/como-doar.html">Como Doar</a>
+        <a href="/html/requisitos.html">Requisitos</a>
+        <a href="/html/onde-doar.html">Onde Doar</a>
+        <a href="/html/duvidas.html">Dúvidas</a>
+      </div>
+
+      <!-- Botão de Login Google -->
+      <div class="g_id_signin" data-type="standard" data-theme="outline" data-size="large"></div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1>Seu sangue pode salvar até 4 vidas</h1>
+      <p>Agende sua doação agora e faça a diferença</p>
+      <a href="#agendar" class="btn-hero">Agendar Doação <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </header>
+
+  <!-- Seção Agendamento -->
+  <section id="agendar" class="agendamento-section">
+    <div class="container">
+      <h2>Agende sua Doação</h2>
+
+      <div class="agendamento-box">
+        <div class="calendar-placeholder">
+          <div id="calendar"></div>
+          <div class="calendar-loading">
+            <p>Carregando calendário...</p>
+            <div class="spinner"></div>
+          </div>
+        </div>
+
+        <!-- Div de login ao lado do calendário -->
+        <div class="login-side">
+          <div id="g_id_onload"
+               data-client_id="776208409554-jg554bl8klbb6t051nfbia00a3dp5hpo.apps.googleusercontent.com"
+               data-callback="handleCredentialResponse"
+               data-auto_select="false"
+               data-itp_support="true">
+          </div>
+          <div class="g_id_signin" data-type="standard" data-theme="outline" data-size="large"></div>
+
+          <!-- Formulário Agendamento -->
+          <div id="agendamento-form" style="display:none; margin-top: 20px;">
+            <h3>Escolha a Data e Hora</h3>
+            <input type="date" id="data" required>
+            <input type="time" id="hora" required>
+            <button onclick="agendar()" class="btn-agendar">Agendar no Google Calendar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Benefícios -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2>Por que doar sangue?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Salva Vidas</h3>
+          <p>Uma única doação pode ajudar até 4 pessoas diferentes.</p>
+        </div>
+        <div class="benefit-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Processo Seguro</h3>
+          <p>Todo o processo é feito com materiais descartáveis.</p>
+        </div>
+        <div class="benefit-card">
+          <i class="fas fa-user-check"></i>
+          <h3>Simples</h3>
+          <p>Basta estar saudável e ter mais de 50kg.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Doe Sangue. Todos os direitos reservados.</p>
+    </div>
+    <div class="footer-contact">
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/calendar.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
