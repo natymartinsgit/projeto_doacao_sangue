@@ -9,9 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- FullCalendar CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
-
   <!-- CSS Personalizado -->
   <link rel="stylesheet" href="../css/style.css">
 
@@ -28,7 +25,6 @@
 
   <!-- Barra de Navegação -->
   <nav class="top-nav">
-
     <div class="container">
       <div class="nav-links">
         <a href="index.html">Início</a>
@@ -58,16 +54,21 @@
       <h2>Agende sua Doação</h2>
 
       <div class="agendamento-box">
-        <div class="calendar-placeholder">
-          <div id="calendar"></div>
-          <div class="calendar-loading">
-            <p>Carregando calendário...</p>
-            <div class="spinner"></div>
-          </div>
+        <!-- Passo a Passo para a Doação -->
+        <div class="passo-a-passo">
+          <h3>Passo a Passo para Doação</h3>
+          <ul class="passos">
+            <li>1. Faça login com sua conta Google</li>
+            <li>2. Selecione uma data disponível</li>
+            <li>3. Escolha o horário preferencial</li>
+            <li>4. Confirme seu agendamento</li>
+          </ul>
+          
         </div>
 
-        <!-- Div de login ao lado do calendário -->
-        <div class="login-side">
+        <!-- Div de login ao lado do passo a passo -->
+        <div class="login-centralizado">
+          
           <div id="g_id_onload"
                data-client_id="776208409554-jg554bl8klbb6t051nfbia00a3dp5hpo.apps.googleusercontent.com"
                data-callback="handleCredentialResponse"
@@ -122,7 +123,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/calendar.js"></script>
   <script src="js/auth.js"></script>
 
 </body>

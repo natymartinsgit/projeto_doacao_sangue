@@ -1,503 +1,552 @@
+/* ========================= */
+/*        VARIÁVEIS         */
+/* ========================= */
 :root {
-    --primary-color: #e30613;
-    --primary-dark: #c00511;
-    --secondary-color: #333;
-    --light-color: #f8f9fa;
-    --dark-color: #212529;
-    --gray-color: #6c757d;
-    --success-color: #28a745;
+  --primary-color: #e30613;       /* Cor principal (vermelho vivo) */
+  --primary-dark: #c00511;        /* Cor principal mais escura */
+  --secondary-color: #333;        /* Cor secundária (cinza escuro) */
+  --light-color: #f8f9fa;         /* Cor clara para fundos */
+  --dark-color: #212529;          /* Cor escura para textos */
+  --gray-color: #6c757d;          /* Cinza para elementos neutros */
+  --success-color: #28a745;       /* Verde para mensagens de sucesso */
 }
 
+/* ========================= */
+/*      RESET PADRÃO        */
+/* ========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;         /* Garante que padding/border não aumentem o tamanho do elemento */
 }
 
+/* ========================= */
+/*     ESTILO GLOBAL DO BODY */
+/* ========================= */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--dark-color);
-    background-color: #fff;
+  font-family: 'Roboto', sans-serif;   /* Fonte principal */
+  line-height: 1.6;                    /* Altura da linha para melhor leitura */
+  color: var(--dark-color);           /* Cor do texto padrão */
+  background-color: #fff;             /* Fundo branco */
 }
 
-/* Container for general page content */
+/* ========================= */
+/*     CONTAINER PADRÃO     */
+/* ========================= */
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;      /* Largura máxima da página */
+  margin: 0 auto;         /* Centraliza o conteúdo */
+  padding: 0 20px;        /* Espaçamento interno lateral */
 }
 
-/* Top Navigation */
+/* ========================= */
+/*      MENU SUPERIOR       */
+/* ========================= */
 .top-nav {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px; /* Reduzi o padding vertical para 10px e mantive 20px horizontal */
+  position: static;
+  top: 0;
+  z-index: 100;
 }
 
 .top-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;  /* Espaço entre os itens */
+  align-items: center;             /* Alinha verticalmente no centro */
 }
-
+/* ========================= */
+/*        LINKS DO MENU      */
+/* ========================= */
 .nav-links a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 500;
-    transition: color 0.3s;
+  color: var(--secondary-color);      /* Cor dos links do menu */
+  text-decoration: none;              /* Remove sublinhado */
+  margin-right: 20px;                 /* Espaçamento entre os links */
+  font-weight: 500;                   /* Peso da fonte médio */
+  transition: color 0.3s;             /* Transição suave na mudança de cor */
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);        /* Cor dos links ao passar o mouse */
 }
 
+/* ========================= */
+/*   BOTÃO LOGIN COM GOOGLE */
+/* ========================= */
 .google-login {
-    margin-left: 20px;
+  margin-left: 20px;                  /* Espaçamento à esquerda */
 }
 
-/* Hero Section */
+/* ========================= */
+/*       HERO SECTION        */
+/* ========================= */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('../imagens/hero-bg.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../imagens/hero-bg.jpg') no-repeat center center/cover;
+  height: 80vh;                       /* Altura da seção (80% da altura da tela) */
+  display: flex;                      /* Flexbox para alinhar conteúdo */
+  align-items: center;               /* Alinha verticalmente no centro */
+  text-align: center;                /* Alinha texto ao centro */
+  color: #fff;                        /* Cor do texto branca */
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;                   /* Largura máxima do conteúdo */
+  margin: 0 auto;                     /* Centraliza horizontalmente */
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
+  font-size: 3rem;                    /* Tamanho do título */
+  margin-bottom: 20px;               /* Espaço abaixo do título */
+  font-weight: 700;                  /* Peso da fonte mais forte */
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+  font-size: 1.5rem;                  /* Tamanho do parágrafo */
+  margin-bottom: 30px;               /* Espaço abaixo do parágrafo */
 }
 
+/* ========================= */
+/*        BOTÃO HERO         */
+/* ========================= */
 .btn-hero {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 2px solid var(--primary-color);
+  display: inline-block;                     /* Permite definir largura e altura */
+  background-color: var(--primary-color);    /* Cor de fundo vermelha (primária) */
+  color: #fff;                               /* Cor do texto branca */
+  padding: 15px 30px;                        /* Espaçamento interno (vertical e horizontal) */
+  border-radius: 50px;                       /* Bordas arredondadas estilo pill */
+  text-decoration: none;                     /* Remove sublinhado */
+  font-size: 1.2rem;                         /* Tamanho da fonte */
+  font-weight: 500;                          /* Peso da fonte médio */
+  transition: all 0.3s;                      /* Animação suave em todas as propriedades */
+  border: 2px solid var(--primary-color);    /* Borda da mesma cor do fundo */
 }
 
 .btn-hero:hover {
-    background-color: transparent;
-    color: #fff;
-    border-color: #fff;
+  background-color: transparent;             /* Fundo transparente ao passar o mouse */
+  color: #fff;                                /* Mantém o texto branco */
+  border-color: #fff;                         /* Muda a borda para branca */
 }
 
-/* Agendamento Section */
+/* ========================= */
+/*    SEÇÃO AGENDAMENTO      */
+/* ========================= */
 .agendamento-section {
-    padding: 80px 0;
-    background-color: var(--light-color);
+  padding: 80px 0;                           /* Espaçamento superior e inferior */
+  background-color: var(--light-color);     /* Cor de fundo clara (cinza muito claro) */
 }
 
 .agendamento-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--primary-color);
-    font-size: 2.5rem;
+  text-align: center;                        /* Centraliza o título */
+  margin-bottom: 50px;                       /* Espaço abaixo do título */
+  color: var(--primary-color);               /* Cor do texto vermelha (primária) */
+  font-size: 2.5rem;                          /* Tamanho da fonte do título */
 }
 
 .agendamento-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+  display: grid;                              /* Usando grid layout */
+  grid-template-columns: 1fr 1fr;             /* Divide em duas colunas de tamanho igual */
+  gap: 40px;                                  /* Espaço entre colunas */
+  background:#fffefe;                    /* Fundo branco */
+  border-radius: 10px;                        /* Bordas arredondadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);   /* Sombra sutil para destacar o bloco */
+  padding: 30px;                              /* Espaçamento interno */
+  /* Sombra preta suave com mais destaque */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.596); 
+  padding: 30px;
 }
 
+/* ======== CALENDÁRIO - PLACEHOLDER ======== */
 .calendar-placeholder {
-    min-height: 400px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  min-height: 400px; /* Define a altura mínima do calendário */
+  border: 1px solid #eee; /* Cor e estilo da borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  display: flex; /* Usado para alinhar os itens dentro do calendário */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: center; /* Alinha os itens horizontalmente */
+  position: relative; /* Permite o uso de elementos posicionados dentro */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites do container */
 }
 
+/* ======== CALENDÁRIO - LOADING ======== */
 .calendar-loading {
-    text-align: center;
+  text-align: center; /* Alinha o texto no centro */
 }
 
+/* ======== ANIMAÇÃO DO SPINNER (CARREGANDO) ======== */
 .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    border-top: 4px solid var(--primary-color);
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Cor e espessura da borda */
+  border-radius: 50%; /* Faz com que o spinner tenha formato circular */
+  border-top: 4px solid var(--primary-color); /* Cor superior do spinner */
+  width: 40px; /* Largura do spinner */
+  height: 40px; /* Altura do spinner */
+  animation: spin 1s linear infinite; /* Animação de rotação infinita */
+  margin: 20px auto; /* Margem para centralizar o spinner */
 }
 
+/* ======== ANIMAÇÃO DE ROTAÇÃO (SPINNER) ======== */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); } /* Começa com a rotação em 0 graus */
+  100% { transform: rotate(360deg); } /* Finaliza a rotação em 360 graus */
 }
 
+/* ======== INFORMAÇÕES DE AGENDAMENTO ======== */
 .agendamento-info h3 {
-    margin-bottom: 20px;
-    color: var(--secondary-color);
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: var(--secondary-color); /* Cor do título */
 }
 
+/* ======== LISTA DE INFORMAÇÕES DE AGENDAMENTO ======== */
 .agendamento-info ol {
-    margin-left: 20px;
-    margin-bottom: 30px;
+  margin-left: 20px; /* Espaçamento à esquerda para a lista */
+  margin-bottom: 30px; /* Espaçamento abaixo da lista */
 }
 
+/* ======== ITENS DA LISTA DE INFORMAÇÕES ======== */
 .agendamento-info ol li {
-    margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaçamento abaixo de cada item */
 }
-
+/* ======== LOGIN REQUERIDO ======== */
 .login-required {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+  background-color: #f8f9fa; /* Cor de fundo */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
 }
 
 .login-required p {
-    margin-bottom: 15px;
+  margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
 }
 
-/* Benefits Section */
+/* ======== SEÇÃO DE BENEFÍCIOS ======== */
 .benefits-section {
-    padding: 80px 0;
+  padding: 80px 0; /* Espaçamento superior e inferior */
 }
 
+/* ======== TÍTULO DA SEÇÃO DE BENEFÍCIOS ======== */
 .benefits-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    color: var(--primary-color);
-    font-size: 2.5rem;
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 50px; /* Espaçamento abaixo do título */
+  color: var(--primary-color); /* Cor do título */
+  font-size: 2.5rem; /* Tamanho da fonte */
 }
 
+/* ======== GRID DE BENEFÍCIOS ======== */
 .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+  display: grid; /* Define o layout como grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define as colunas do grid */
+  gap: 30px; /* Espaçamento entre os itens do grid */
 }
 
+/* ======== CARTÃO DE BENEFÍCIO ======== */
 .benefit-card {
-    text-align: center;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center; /* Centraliza o conteúdo dentro do cartão */
+  padding: 30px; /* Espaçamento interno do cartão */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombras suaves para o cartão */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição */
 }
 
+/* ======== HOVER - EFEITO DE CARTÃO DE BENEFÍCIO ======== */
 .benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px); /* Move o cartão para cima */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Aumenta a sombra no hover */
 }
 
+/* ======== ÍCONES NOS CARTÕES DE BENEFÍCIO ======== */
 .benefit-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+  font-size: 3rem; /* Tamanho do ícone */
+  color: var(--primary-color); /* Cor do ícone */
+  margin-bottom: 20px; /* Espaçamento abaixo do ícone */
 }
 
+/* ======== TÍTULO DENTRO DO CARTÃO DE BENEFÍCIO ======== */
 .benefit-card h3 {
-    margin-bottom: 15px;
-    color: var(--secondary-color);
+  margin-bottom: 15px; /* Espaçamento abaixo do título */
+  color: var(--secondary-color); /* Cor do título */
 }
 
-/* Footer */
+/* ======== RODAPÉ ======== */
 .footer {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 60px 0 20px;
-    position:fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  background-color: var(--secondary-color); /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto */
+  padding: 60px 0 20px; /* Espaçamento interno: superior, inferior */
+  position:stati;/* Fixa o rodapé na parte inferior */
+  bottom: 0; /* Coloca o rodapé no fundo da página */
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o conteúdo do rodapé */
 }
 
+/* ======== CONTEÚDO DO RODAPÉ ======== */
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+  display: grid; /* Define o layout como grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Define o número de colunas */
+  gap: 40px; /* Espaçamento entre os itens */
+  margin-bottom: 40px; /* Espaçamento abaixo do conteúdo */
 }
 
+/* ======== LOGO NO RODAPÉ ======== */
 .footer-logo h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem; /* Tamanho da fonte do logo */
+  margin-bottom: 10px; /* Espaçamento abaixo do logo */
 }
 
 .footer-logo p {
-    color: var(--gray-color);
+  color: var(--gray-color); /* Cor do texto abaixo do logo */
 }
 
+/* ======== TÍTULOS DOS LINKS E CONTATO ======== */
 .footer-links h4, 
 .footer-contact h4 {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+  margin-bottom: 20px; /* Espaçamento abaixo dos títulos */
+  font-size: 1.2rem; /* Tamanho da fonte dos títulos */
 }
 
+/* ======== LINKS NO RODAPÉ ======== */
 .footer-links a {
-    display: block;
-    color: var(--gray-color);
-    margin-bottom: 10px;
-    text-decoration: none;
-    transition: color 0.3s;
+  display: block; /* Cada link ocupa uma linha */
+  color: var(--gray-color); /* Cor do link */
+  margin-bottom: 10px; /* Espaçamento abaixo de cada link */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: color 0.3s; /* Efeito de transição na cor */
 }
 
+/* ======== HOVER - LINKS NO RODAPÉ ======== */
 .footer-links a:hover {
-    color: #fff;
+  color: #fff; /* Cor do link ao passar o mouse */
 }
 
+/* ======== INFORMAÇÕES DE CONTATO NO RODAPÉ ======== */
 .footer-contact p {
-    margin-bottom: 10px;
-    color: var(--gray-color);
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px; /* Espaçamento abaixo das informações */
+  color: var(--gray-color); /* Cor das informações de contato */
+  display: flex; /* Usa o modelo flexbox para alinhar ícones e texto */
+  align-items: center; /* Alinha verticalmente o conteúdo */
 }
 
+/* ======== ÍCONES DE CONTATO NO RODAPÉ ======== */
 .footer-contact i {
-    margin-right: 10px;
-    color: var(--primary-color);
+  margin-right: 10px; /* Espaçamento à direita do ícone */
+  color: var(--primary-color); /* Cor dos ícones */
 }
 
+/* ======== PARTE INFERIOR DO RODAPÉ ======== */
 .footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--gray-color);
-    font-size: 0.9rem;
+  text-align: center; /* Centraliza o conteúdo da parte inferior */
+  padding-top: 20px; /* Espaçamento superior */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Borda superior sutil */
+  color: var(--gray-color); /* Cor do texto */
+  font-size: 0.9rem; /* Tamanho da fonte */
 }
-
-/* Responsividade */
+/* ======== RESPONSIVIDADE PARA TELAS MENORES (max-width: 768px) ======== */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .agendamento-box {
-        grid-template-columns: 1fr;
-    }
-    
-    .top-nav .container {
-        flex-direction: column;
-    }
-    
-    .nav-links {
-        margin-bottom: 15px;
-    }
+  /* ======== HERO - TÍTULO E PARÁGRAFO ======== */
+  .hero h1 {
+      font-size: 2.5rem; /* Reduz o tamanho da fonte do título */
+  }
+  
+  .hero p {
+      font-size: 1.2rem; /* Reduz o tamanho da fonte do parágrafo */
+  }
+  
+  /* ======== AGENDAMENTO - GRID ======== */
+  .agendamento-box {
+      grid-template-columns: 1fr; /* Altera o layout para uma coluna no grid */
+  }
+  
+  /* ======== NAVEGAÇÃO - TOP NAV ======== */
+  .top-nav .container {
+      flex-direction: column; /* Coloca os itens da navegação em coluna */
+  }
+  
+  /* ======== LINKS DE NAVEGAÇÃO ======== */
+  .nav-links {
+      margin-bottom: 15px; /* Adiciona espaço entre os links de navegação */
+  }
 }
 
+/* ======== RESPONSIVIDADE PARA TELAS AINDA MENORES (max-width: 480px) ======== */
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero {
-        height: 70vh;
-    }
+  /* ======== HERO - TÍTULO ======== */
+  .hero h1 {
+      font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+  }
+  
+  /* ======== HERO - ALTURA ======== */
+  .hero {
+      height: 70vh; /* Diminui a altura do container do hero */
+  }
 }
 
-/* Info Section (added) */
+/* ======== SEÇÃO DE INFORMAÇÕES (ADICIONADA) ======== */
 .info-section {
-    padding: 60px 0;
-    background-color: var(--light-color);
-    border-top: 1px solid #eee;
+  padding: 60px 0; /* Espaçamento superior e inferior */
+  background-color: var(--light-color); /* Cor de fundo da seção */
+  border-top: 1px solid #eee; /* Borda superior sutil */
 }
 
+/* ======== TÍTULO DA SEÇÃO DE INFORMAÇÕES ======== */
 .info-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 2rem;
-    text-align: center;
+  color: var(--primary-color); /* Cor do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-size: 2rem; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o título */
 }
 
+/* ======== PARÁGRAFO E LISTA NA SEÇÃO DE INFORMAÇÕES ======== */
 .info-section p, 
 .info-section ul {
-    font-size: 1rem;
-    color: var(--secondary-color);
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    text-align: center;
+  font-size: 1rem; /* Tamanho da fonte */
+  color: var(--secondary-color); /* Cor do texto */
+  max-width: 800px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  text-align: center; /* Centraliza o texto */
 }
 
+/* ======== LISTA NA SEÇÃO DE INFORMAÇÕES ======== */
 .info-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
+  list-style-type: disc; /* Define os marcadores como discos */
+  padding-left: 20px; /* Espaçamento à esquerda da lista */
+  text-align: left; /* Alinha o texto da lista à esquerda */
 }
 
+/* ======== ITENS DA LISTA NA SEÇÃO DE INFORMAÇÕES ======== */
 .info-section ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaçamento abaixo de cada item da lista */
 }
 
-/* CEP Search */
+/* ======== BUSCA DE CEP ======== */
 #cep-search {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+  padding: 20px; /* Espaçamento interno */
+  background-color: #fff; /* Cor de fundo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
+  margin-top: 30px; /* Espaçamento superior */
 }
 
+/* ======== CAMPO DE TEXTO PARA O CEP ======== */
 #cep-search input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 10px;
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: 1px solid #ccc; /* Cor da borda */
+  width: 100%; /* Largura total */
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-bottom: 10px; /* Espaçamento inferior */
 }
 
+/* ======== BOTÃO DE PESQUISA DE CEP ======== */
 #cep-search button {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
+  padding: 10px 20px; /* Espaçamento interno: superior/inferior e lateral */
+  background-color: var(--primary-color); /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor como mãozinha ao passar por cima */
+  width: 100%; /* Largura total */
+  font-size: 1rem; /* Tamanho da fonte */
 }
 
+/* ======== HOVER - BOTÃO DE PESQUISA DE CEP ======== */
 #cep-search button:hover {
-    background-color: var(--primary-dark);
+  background-color: var(--primary-dark); /* Cor de fundo ao passar o mouse */
 }
 
+/* ======== RESULTADO DA BUSCA DE CEP ======== */
 #resultado-cep {
-    margin-top: 20px;
-    text-align: center;
+  margin-top: 20px; /* Espaçamento superior */
+  text-align: center; /* Centraliza o conteúdo */
 }
 
+/* ======== PARÁGRAFO DE RESULTADO DE CEP ======== */
 #resultado-cep p {
-    color: var(--success-color);
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-/* ----- Botão Flutuante ----- */
-#chat-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
-  }
-  
-  #chat-button:hover {
-    background-color: var(--primary-dark);
-  }
-  
-  /* Tooltip simples */
-  #chat-button[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 75px;
-    right: 0;
-    background: var(--dark-color);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 4px;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  
-  
-
-/* ======== Início do CSS do Chatbot ======== */
-
-/* Botão Flutuante */
-#chat-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: background-color 0.3s;
-  z-index: 1000;
+  color: var(--success-color); /* Cor do texto (indicando sucesso) */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto em negrito */
 }
 
+/* ======== BOTÃO FLUTUANTE (CHAT) ======== */
+#chat-button {
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 20px; /* Distância da parte direita */
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  background-color: var(--primary-color); /* Cor de fundo */
+  color: #fff; /* Cor do texto (ícone) */
+  font-size: 1.5rem; /* Tamanho da fonte (para o ícone) */
+  border-radius: 50%; /* Forma arredondada */
+  display: flex; /* Flexbox para centralizar o conteúdo */
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  justify-content: center; /* Alinha horizontalmente o conteúdo */
+  cursor: pointer; /* Cursor como mãozinha ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+/* ======== HOVER - BOTÃO FLUTUANTE ======== */
 #chat-button:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-dark); /* Cor de fundo ao passar o mouse */
 }
-
-/* Tooltip simples */
+/* ======== TOOLTIP SIMPLES (ao passar o mouse no botão) ======== */
 #chat-button[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 75px;
-  right: 0;
-  background: var(--dark-color);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  content: attr(title); /* Exibe o texto do atributo title como conteúdo do tooltip */
+  position: absolute; /* Posiciona o tooltip relativo ao botão */
+  bottom: 75px; /* Distância do botão para o tooltip aparecer acima dele */
+  right: 0; /* Alinha o tooltip à direita do botão */
+  background: var(--dark-color); /* Cor de fundo do tooltip */
+  color: #fff; /* Cor do texto do tooltip */
+  padding: 6px 10px; /* Espaçamento interno do tooltip */
+  border-radius: 4px; /* Bordas arredondadas do tooltip */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  font-size: 0.9rem; /* Tamanho da fonte do texto */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra suave para o tooltip */
 }
 
-/* Janela de Chat (escondida por padrão) */
+/* ======== INÍCIO DO CSS DO CHATBOT ======== */
+
+/* ======== BOTÃO FLUTUANTE DO CHAT ======== */
+#chat-button {
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 20px; /* Distância da parte direita */
+  width: 60px; /* Largura do botão */
+  height: 60px; /* Altura do botão */
+  background-color: var(--primary-color); /* Cor de fundo do botão */
+  color: #fff; /* Cor do ícone (ou texto) dentro do botão */
+  font-size: 1.5rem; /* Tamanho do ícone */
+  border-radius: 50%; /* Forma arredondada */
+  display: flex; /* Flexbox para centralizar o conteúdo */
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  justify-content: center; /* Alinha horizontalmente o conteúdo */
+  cursor: pointer; /* Cursor como mãozinha ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra suave */
+  transition: background-color 0.3s; /* Transição suave para a cor do botão */
+  z-index: 1000; /* Garantir que o botão fique sobre outros elementos */
+}
+
+/* ======== HOVER - BOTÃO FLUTUANTE DO CHAT ======== */
+#chat-button:hover {
+  background-color: var(--primary-dark); /* Cor de fundo ao passar o mouse */
+}
+
+/* ======== JANELA DO CHAT (ESCONDIDA POR PADRÃO) ======== */
 #chat-widget {
-  display: none;
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  flex-direction: column;
-  overflow: hidden;
-  font-family: 'Roboto', sans-serif;
-  z-index: 1000;
+  display: none; /* Janela de chat fica oculta inicialmente */
+  position: fixed; /* Fixa a janela de chat na tela */
+  bottom: 90px; /* Distância da parte inferior */
+  right: 20px; /* Distância da parte direita */
+  width: 300px; /* Largura da janela */
+  max-height: 400px; /* Altura máxima da janela */
+  background: #fff; /* Cor de fundo da janela */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* Sombra para destacar a janela */
+  flex-direction: column; /* Flexbox para disposição dos itens */
+  overflow: hidden; /* Impede o conteúdo de ultrapassar a janela */
+  font-family: 'Roboto', sans-serif; /* Fonte usada na janela */
+  z-index: 1000; /* Garante que a janela fique sobre outros elementos */
 }
 
 /* Cabeçalho */
@@ -626,113 +675,43 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  /* Estilo Colorido para o FullCalendar */
-.fc {
-    background-color: #fff5f5;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .fc-toolbar-title {
-    font-size: 26px;
-    font-weight: bold;
-    color: #d32f2f;
-  }
-  
-  .fc-button {
-    background-color: #d32f2f;
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    padding: 6px 12px;
-    border-radius: 10px;
-    transition: background 0.3s;
-  }
-  
-  .fc-button:hover {
-    background-color: #b71c1c;
-  }
-  
-  .fc-day-today {
-    background-color: #ffebee;
-    border-radius: 8px;
-  }
-  
-  .fc-daygrid-day:hover {
-    background-color: #ffcdd2;
-    cursor: pointer;
-  }
-  
-  .fc-event {
-    background-color: #e53935;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-  #calendar {
-    max-width: 800px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza o calendário */
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .fc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-  }
-  
-  .fc-toolbar-title {
-    font-size: 22px;
-  }
-  
-  .fc-button {
-    background-color: #e53935;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    padding: 6px 12px;
-  }
-  
-  .fc-button:hover {
-    background-color: #c62828;
-  }
-  /* Estilo para a seção de agendamento */
-  .agendamento-box-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .calendar-placeholder, .login-google {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .calendar-placeholder {
-    flex: 2;
-    min-width: 300px;
-  }
-  
-  .login-google {
-    flex: 1;
-    min-width: 250px;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  .login-google h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #333;
-  }
+/* Container da seção do passo a passo */
+.passo-a-passo {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.passos {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/* Container do botão Google */
+.login-container {
+  text-align: center;
+  margin-top: 10px; /* Ajuste o espaço conforme necessário */
+}
+
+/* Botão Google */
+.g_id_signin {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #dc3545;
+  border: 2px solid #130f0f2c;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover no botão */
+.g_id_signin:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
